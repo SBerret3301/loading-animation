@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character set and viewport for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the document -->
+    <title>Loading Animation</title>
+</head>
+<style>
+    /* Body Styles */
+    body {
+        background-color: rgb(24, 23, 23);
+    }
+
+    /* Container Styles */
+    div {
+        display: flex;
+        justify-content: center;
+        margin: 50px auto;
+    }
+
+    /* Loading Circle Styles */
+    div > div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(68, 68, 163);
+        margin: 40px 10px;
+        animation: loading 1s linear infinite;
+        animation-direction: alternate;
+    }
+
+    /* Animation Delay for Circles */
+    div :nth-child(2) {
+        animation-delay: 0.4s;
+    }
+    div :nth-child(3) {
+        animation-delay: 0.8s;
+    }
+    div :nth-child(4) {
+        animation-delay: 1s;
+    }
+
+    /* Keyframes for Loading Animation */
+    @keyframes loading {
+        to {
+            opacity: 0.5;
+            transform: translateY(-25px);
+        }
+    }
+</style>
+<body>
+    <!-- Container for Loading Animation -->
+    <div>
+        <!-- Loading Circles -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
